@@ -29,7 +29,7 @@ const rl = readline.createInterface({
 const bson = new BSON();
 const ws = new WebSocket(url);
 ws.on('open', () => {
-    const sent = Date.now();
+    let sent = Date.now();
 
     console.log(chalk.green(`Connected to ${url}`));
     rl.prompt();
